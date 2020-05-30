@@ -1,0 +1,1 @@
+{{ with $.Page.Params.external }}{{ $file := (printf "resources/polly/external/%s" (sha1 .)) }}{{ readFile $file | markdownify }}{{ end }}

@@ -1,0 +1,3 @@
+contrib/*
+**/*.DS_Store
+**/*.gitkeep

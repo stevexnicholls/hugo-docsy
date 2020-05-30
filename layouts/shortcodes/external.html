@@ -1,0 +1,12 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $color := .Get "color" | default "primary" }}
+<div class="pageinfo pageinfo-{{ $color }}">
+<p>
+<i class="mdi mdi-link-variant"></i>
+{{ if $.Page.Params.external }}
+This document was generated from an external <a href="{{ $.Page.Params.external }}">source</a>{{ if $.Page.Params.repository }} located in this <a href="{{ $.Page.Params.repository }}">repository</a>{{ end }}.
+{{ else }}
+This document was generated from an external source.
+{{ end }}
+</p>
+</div>

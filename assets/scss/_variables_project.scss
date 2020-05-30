@@ -1,0 +1,36 @@
+/*
+
+Add styles or override variables from the theme here.
+
+*/
+
+$enable-rounded: false;
+
+$mdi-font-path:        "../webfonts" !default;
+
+@import "../vendor/MaterialDesign-Webfont/scss/materialdesignicons.scss";
+
+$google_font_name: "Roboto";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+// Font weights
+
+$font-weight-light: 300;
+$font-weight-normal: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 700;
+$headings-font-weight: $font-weight-normal;
+
+// Font size
+// This is the docsy default; just need it to set new heading sizes below.
+
+$font-size-base: 1rem !default;
+
+// Heading sizes
+
+$h1-font-size: $font-size-base * 3.25;
+$h2-font-size: $font-size-base * 2.25;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.35;
+$h5-font-size: $font-size-base * 1.15;

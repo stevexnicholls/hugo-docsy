@@ -1,0 +1,97 @@
+$font-family-condensed: prepend($font-family-base, "Roboto Condensed");
+
+main {
+  .fancy_ordered_lists {
+    ol>li:before {
+      font-size: 0.9em;
+      position: absolute;
+      top: -0.4rem;
+      left: 0.1rem;
+      display: block;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 2.25rem;
+      width: 2.25rem;
+      box-shadow: 0 0 0 0.5rem $white;
+      content: counter(steps);
+      font-weight: $font-weight-bold;
+      background: lighten($primary, 10%);
+      color: $white;
+      margin-left: -1.2rem;
+    }
+
+    ol>li,
+    ol>li+li {
+      padding-left: 2.25rem;
+      counter-increment: steps;
+      position: relative;
+      margin-bottom: 1.75rem;
+      margin-top: 2.5rem;
+      box-shadow: inset 2px 0 $gray-400;
+      list-style: none;
+    }
+
+    ol {
+      counter-reset: steps;
+    }
+  }
+}
+
+// Search
+
+.td-search-input {
+  background: transparent;
+
+  &.form-control:focus {
+      border-color: lighten($primary, 60%);
+      box-shadow: 0 0 0 2px lighten($primary, 30%);
+  }
+
+  @if $enable-rounded {
+      border-radius: 0.1rem;
+  }
+
+  font-family: "Font Awesome 5 Free", $font-family-base;
+}
+
+.td-navbar {
+  .nav-link {
+    font-weight: $font-weight-medium;
+  }
+  .navbar-brand {
+    letter-spacing: -0.04em;
+    font-size: 1.75em;
+    line-height: 1.125;
+  }
+}
+
+.pageinfo {
+  border-width: 0.05rem;
+  border-radius: 0.1rem;
+}
+
+.td-content {
+  h1, h2, h3 {
+    font-family: $font-family-condensed;
+    font-weight: $font-weight-medium;
+    letter-spacing: -0.05em;
+  }
+  h1 {
+    margin-bottom: 2.25rem;
+  }
+  h1, h2, h3, h4, h5 {
+    code {
+      color: $gray-900;
+    }
+  }
+}
+
+.td-sidebar-nav {
+  a.active {
+    font-weight: $font-weight-medium;
+    color: $blue;
+  }
+  a > i {
+    padding-right: 0.2em;
+  }
+}
