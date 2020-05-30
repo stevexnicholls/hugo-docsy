@@ -56,12 +56,17 @@ main {
 
 .td-navbar {
   .nav-link {
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-normal;
+    text-shadow: none;
   }
   .navbar-brand {
     letter-spacing: -0.04em;
     font-size: 1.75em;
     line-height: 1.125;
+  }
+  .td-search-input  {
+    box-shadow: none;
+    font-weight: $font-weight-normal;
   }
 }
 
@@ -88,10 +93,40 @@ main {
 
 .td-sidebar-nav {
   a.active {
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-normal;
     color: $blue;
+  }
+
+  a.td-sidebar-link__section {
+    font-weight: 400;
   }
   a > i {
     padding-right: 0.2em;
+  }
+}
+
+.td-max-width-on-larger-screens {
+  @include media-breakpoint-up(lg) {
+      max-width: 100%;
+  }
+
+}
+
+.section-index {
+
+  .entry {
+      padding: .75rem;
+  }
+
+  h5 {
+      margin-bottom: 0.5rem;
+
+      a {
+          font-weight: $font-weight-medium;
+      }
+  }
+
+  p {
+      margin-top: 0;
   }
 }

@@ -5,6 +5,7 @@ Add styles or override variables from the theme here.
 */
 
 $enable-rounded: false;
+$enable-shadows: false;
 
 $mdi-font-path:        "../webfonts" !default;
 
@@ -34,3 +35,9 @@ $h2-font-size: $font-size-base * 2.25;
 $h3-font-size: $font-size-base * 1.5;
 $h4-font-size: $font-size-base * 1.35;
 $h5-font-size: $font-size-base * 1.15;
+
+// Colors
+
+$blue: #1976d2;
+$primary: #1976d2;
+$link-color: $primary;
