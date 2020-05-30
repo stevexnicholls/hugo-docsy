@@ -3,3 +3,4 @@
 /resources/*
 /polly.log
 !.gitkeep
+node_modules

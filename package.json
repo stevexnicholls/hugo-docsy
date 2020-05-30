@@ -1,0 +1,23 @@
+{
+  "name": "hugo-docsy",
+  "version": "0.0.1",
+  "description": "Hugo template",
+  "main": "none.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevexnicholls/hugo-docsy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevexnicholls/hugo-docsy/issues"
+  },
+  "homepage": "https://github.com/stevexnicholls/hugo-docsy#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-cli": "^7.1.1"
+  }
+}
