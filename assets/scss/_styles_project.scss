@@ -95,16 +95,20 @@ main {
     color: $blue;
   }
 
-  a.td-sidebar-link__section {
-    font-weight: 400;
+  .td-sidebar-link__page {
+    font-weight: $font-weight-normal;
   }
+
+  a.td-sidebar-link__section {
+    font-weight: $font-weight-bold;
+  }
+
   a > i {
     padding-right: 0.2em;
   }
 }
 
 .navbar-brand {
-  font-family: $font-family-condensed;
   font-weight: $font-weight-medium;
 }
 
