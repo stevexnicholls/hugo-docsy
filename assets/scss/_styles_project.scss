@@ -79,13 +79,29 @@ main {
     font-weight: $font-weight-medium;
     letter-spacing: -0.05em;
   }
+
   h1 {
     margin-bottom: 2.25rem;
   }
+
   h1, h2, h3, h4, h5 {
     code {
       color: $gray-900;
     }
+  }
+
+  .alert > code {
+      color: inherit;
+      padding: 0.2em 0.4em;
+      margin: 0;
+      font-size: 85%;
+      word-break: normal;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 0.25rem;
+  }
+
+  blockquote {
+    border-color: $primary;
   }
 }
 
