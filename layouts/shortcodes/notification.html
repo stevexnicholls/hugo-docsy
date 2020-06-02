@@ -1,0 +1,6 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $type := .Get "type" | default "info" }}
+{{ $icon := .Get 1 | default "" }}
+<div class="alert alert-{{ $type }}" role="alert">
+{{ .Inner | markdownify }}
+</div>
