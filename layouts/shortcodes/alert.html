@@ -1,8 +1,0 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
-{{ $color := .Get "color" | default "primary" }}
-{{ $icon := .Get "icon" | default "" }}
-<div class="alert alert-{{ $color }}" role="alert">
-{{ if ne $icon ""}}<i class="mdi mdi-{{ $icon }}"></i>{{ end }}
-{{ with .Get "title" }}<h4 class="alert-heading">{{ . | safeHTML }}</h4>{{ end }}
-{{ .Inner | markdownify }}
-</div>
