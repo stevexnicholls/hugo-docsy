@@ -172,3 +172,9 @@ ul.td-sidebar-nav__section.head {
   padding-top: 0.3rem;
   border-top: 1px solid $td-sidebar-border-color;
 }
+
+section.td-overlay {
+  &--dark::after {
+      background-color: transparent;
+  }
+}
