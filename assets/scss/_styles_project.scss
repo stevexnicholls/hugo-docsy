@@ -2,7 +2,7 @@ $font-family-condensed: prepend($font-family-base, "Roboto Condensed");
 
 main {
   .fancy_ordered_lists {
-    ol>li:before {
+    ol > li:before {
       font-size: 0.9em;
       position: absolute;
       top: -0.4rem;
@@ -20,8 +20,8 @@ main {
       margin-left: -1.2rem;
     }
 
-    ol>li,
-    ol>li+li {
+    ol > li,
+    ol > li + li {
       padding-left: 2.25rem;
       counter-increment: steps;
       position: relative;
@@ -41,12 +41,12 @@ main {
   background: transparent;
 
   &.form-control:focus {
-      border-color: lighten($primary, 60%);
-      box-shadow: 0 0 0 2px lighten($primary, 30%);
+    border-color: lighten($primary, 60%);
+    box-shadow: 0 0 0 2px lighten($primary, 30%);
   }
 
   @if $enable-rounded {
-      border-radius: 0.1rem;
+    border-radius: 0.1rem;
   }
 
   font-family: "Material Design Icons", "Font Awesome 5 Free", $font-family-base;
@@ -54,18 +54,24 @@ main {
 
 .td-navbar {
   .nav-link {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-medium;
     text-shadow: none;
+    // color: inherit !important;
   }
   .navbar-brand {
     letter-spacing: -0.04em;
     font-size: 1.25rem;
     line-height: 1.125;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-bold !important;
+    padding-left: 0.8em;
   }
-  .td-search-input  {
+  .td-search-input {
     box-shadow: none;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-medium;
+    // color: $gray-900 !important;
+    @include placeholder {
+      color: $gray-400;
+    }
   }
 }
 
@@ -75,7 +81,9 @@ main {
 }
 
 .td-content {
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: $font-family-condensed;
     font-weight: $font-weight-medium;
     letter-spacing: -0.05em;
@@ -85,20 +93,24 @@ main {
     margin-bottom: 2.25rem;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     code {
-      color: $gray-900;
+      color: inherit;
     }
   }
 
   .alert > code {
-      color: inherit;
-      padding: 0.2em 0.4em;
-      margin: 0;
-      font-size: 85%;
-      word-break: normal;
-      background-color: rgba(0, 0, 0, 0.05);
-      border-radius: 0.25rem;
+    color: inherit;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    word-break: normal;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
   }
 
   blockquote {
@@ -109,7 +121,7 @@ main {
 .td-sidebar-nav {
   a.active {
     font-weight: $font-weight-normal;
-    color: $blue;
+    color: $blue !important;
   }
 
   .td-sidebar-link__page {
@@ -123,35 +135,39 @@ main {
   a > i {
     padding-right: 0.2em;
   }
-}
 
-.navbar-brand {
-  font-weight: $font-weight-medium;
-}
-
-.td-max-width-on-larger-screens {
-  @include media-breakpoint-up(lg) {
-      max-width: 90%;
+  a {
+    line-height: 1.2em;
+    padding-top: 0.2em;
+    color: $gray-700 !important;
   }
-
 }
 
-.section-index {
+.td-navbar {
+  box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+  border-bottom: 1px solid #d4dadf;
+  //background-color: #ffffff;
 
+  .navbar-brand {
+    font-weight: $font-weight-medium;
+    color: #fff !important;
+  }
+}
+.section-index {
   .entry {
-      padding: .75rem;
+    padding: 0.75rem;
   }
 
   h5 {
-      margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 
-      a {
-          font-weight: $font-weight-medium;
-      }
+    a {
+      font-weight: $font-weight-medium;
+    }
   }
 
   p {
-      margin-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -159,8 +175,9 @@ main {
   font-size: 1rem;
 }
 
-body {
+body, html {
   -webkit-font-smoothing: antialiased;
+  color: $dark;
 }
 
 .alert > i {
@@ -175,6 +192,44 @@ ul.td-sidebar-nav__section.head {
 
 section.td-overlay {
   &--dark::after {
-      background-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.td-toc {
+  #TableOfContents {
+    font-size: 0.9em;
+
+    & > ul > li > a {
+      font-weight: $font-weight-bold;
+      color: $gray-900;
+    }
+
+    & > ul > li > ul > li > a {
+      font-weight: $font-weight-medium;
+    }
+
+    a {
+      color: $gray-700;
+      word-wrap: break-word;
+      padding-bottom: 0.8rem;
+    }
+
+    li {
+      line-height: 0.8em;
+      margin-left: 0;
+    }
+  }
+
+  .toc-head {
+    font-weight: $font-weight-bold;
+    color: $blue;
+  }
+}
+
+@media (min-width: 1600px) {
+  .pageinfo {
+    flex: 0 0 80%;
+    max-width: 80%;
   }
 }

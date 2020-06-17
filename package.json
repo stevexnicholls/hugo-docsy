@@ -18,6 +18,7 @@
   "homepage": "https://github.com/stevexnicholls/hugo-docsy#readme",
   "devDependencies": {
     "autoprefixer": "^9.8.0",
-    "postcss-cli": "^7.1.1"
+    "postcss-cli": "^7.1.1",
+    "prettier": "2.0.5"
   }
 }

@@ -1,8 +1,11 @@
 {{ partial "page-meta-links.html" . }}
 {{ if not .Site.Params.ui.toc_disable }}
+{{ if not $.Page.Params.disableTableOfContents }}
+<div class="toc-head pt-2 pb-3" >Contents</div>
 {{ with .TableOfContents }}
 {{ if ge (len .) 200 }}
 {{ . }}
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
